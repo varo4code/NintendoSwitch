@@ -36,7 +36,7 @@ npm run dev
 ```
 
 ## 📦 Built With
-**Nuxt 3** - The intuitive Vue framework
-**Vue 3** - Progressive JavaScript framework
-**Pinia** - State management made simple
-**Tailwind CSS** - Modern utility-first styling
+- **Nuxt 3** - The intuitive Vue framework
+- **Vue 3** - Progressive JavaScript framework
+- **Pinia** - State management made simple
+- **Tailwind CSS** - Modern utility-first styling
