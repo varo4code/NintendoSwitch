@@ -11,7 +11,8 @@ A modern and stylish redesign of the Nintendo Switch interface, built with **Nux
 
 ## 📸 Preview
 
-![Nintendo Switch Redesign](https://www.figma.com/community/resource/f0664366-2145-4c11-8578-170e62cc50f5/thumbnail)
+(Coming Soon!)
+<!-- ![Nintendo Switch Redesign](https://www.figma.com/community/resource/f0664366-2145-4c11-8578-170e62cc50f5/thumbnail) -->
 
 ## 🛠 Installation
 
