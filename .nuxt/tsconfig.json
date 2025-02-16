@@ -77,6 +77,9 @@
       "assets": [
         "../assets"
       ],
+      "assets/*": [
+        "../assets/*"
+      ],
       "public": [
         "../public"
       ],
@@ -99,7 +102,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/d813b713-c551-425e-90d4-76faf63cae92"
+        "./manifest/meta/27019407-b978-413c-a7df-c9c861fb7677"
       ],
       "#components": [
         "./components"

@@ -95,6 +95,9 @@
       "assets": [
         "../assets"
       ],
+      "assets/*": [
+        "../assets/*"
+      ],
       "public": [
         "../public"
       ],
@@ -103,6 +106,9 @@
       ],
       "#build": [
         "./"
+      ],
+      "#build/*": [
+        "./*"
       ],
       "#internal/nuxt/paths": [
         "../node_modules/nuxt/dist/core/runtime/nitro/paths"
