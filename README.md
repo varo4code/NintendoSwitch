@@ -25,15 +25,6 @@ A modern and stylish redesign of the Nintendo Switch interface, built with **Nux
 ```bash
 # npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 3. Start the development server on `http://localhost:3000`:
@@ -41,13 +32,10 @@ bun install
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
+
+## 📦 Built With
+**Nuxt 3** - The intuitive Vue framework
+**Vue 3** - Progressive JavaScript framework
+**Pinia** - State management made simple
+**Tailwind CSS** - Modern utility-first styling
