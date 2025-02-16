@@ -8,11 +8,10 @@ A modern and stylish redesign of the Nintendo Switch interface, built with **Nux
 - Uses **Pinia** for state management
 - **Composition API** with `script setup`
 - Smooth animations and transitions
-- Fully responsive UI
 
 ## 📸 Preview
 
-![Nintendo Switch Redesign](https://your-image-url-here.com)
+![Nintendo Switch Redesign](https://www.figma.com/community/resource/f0664366-2145-4c11-8578-170e62cc50f5/thumbnail)
 
 ## 🛠 Installation
 
