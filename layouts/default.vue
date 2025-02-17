@@ -1,15 +1,14 @@
 <template>
   <div
-    class="h-screen w-screen bg-cover grid grid-rows-7 transition-all duration-1500"
+    class="h-screen w-screen bg-cover grid grid-rows-[3fr_13fr_2fr] transition-all duration-1200"
     :class="{ 'opacity-100': initialized }"
     :style="styleObj"
   >
     <MenuBar>
-      <MainButtons v-if="initialized"></MainButtons>
-      <div v-else></div>
+      <MainButtons :show="initialized"></MainButtons>
       <Status></Status>
     </MenuBar>
-    <div v-if="!initialized" class="row-span-5 grid place-items-center">
+    <div v-if="!initialized" class="grid place-items-center">
       <img
         @click="startSwitch"
         src="assets/icons/power.svg"
@@ -17,10 +16,10 @@
         class="w-35 h-35 rounded-full border-6 p-4 border-white transition-all duration-700 hover:bg-[#199fffe6] hover:w-38 hover:h-38"
       />
     </div>
-    <div v-else class="row-span-5">
+    <div v-else>
       <slot></slot>
     </div>
-    <MenuBar> Footer </MenuBar>
+    <MenuBar :span="1"> Footer </MenuBar>
   </div>
 </template>
 
@@ -52,9 +51,9 @@ const startSwitch = () => {
       console.warn("Fullscreen API is not supported in this browser.");
     }
   }
-  initialized.value = true;
   setTimeout(() => {
+    initialized.value = true;
     styleObj.value = { backgroundImage: `url(/images/bg/marioOdyssey.svg)` };
-  }, 600);
+  }, 1100);
 };
 </script>
