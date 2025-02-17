@@ -2,7 +2,8 @@
 import type { DefineComponent, SlotsType } from 'vue'
 type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refresh: () => Promise<void>}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, SlotsType<{ fallback: { error: unknown } }>>
 interface _GlobalComponents {
-      'MainButtons': typeof import("../components/MainButtons/index.vue")['default']
+      'ActionButtons': typeof import("../components/ActionButtons/index.vue")['default']
+    'MainButtons': typeof import("../components/MainButtons/index.vue")['default']
     'MenuBar': typeof import("../components/MenuBar/index.vue")['default']
     'StatusBattery': typeof import("../components/Status/Battery/index.vue")['default']
     'StatusClock': typeof import("../components/Status/Clock/index.vue")['default']
@@ -31,7 +32,8 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyMainButtons': typeof import("../components/MainButtons/index.vue")['default']
+      'LazyActionButtons': typeof import("../components/ActionButtons/index.vue")['default']
+    'LazyMainButtons': typeof import("../components/MainButtons/index.vue")['default']
     'LazyMenuBar': typeof import("../components/MenuBar/index.vue")['default']
     'LazyStatusBattery': typeof import("../components/Status/Battery/index.vue")['default']
     'LazyStatusClock': typeof import("../components/Status/Clock/index.vue")['default']
@@ -66,6 +68,7 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const ActionButtons: typeof import("../components/ActionButtons/index.vue")['default']
 export const MainButtons: typeof import("../components/MainButtons/index.vue")['default']
 export const MenuBar: typeof import("../components/MenuBar/index.vue")['default']
 export const StatusBattery: typeof import("../components/Status/Battery/index.vue")['default']
@@ -95,6 +98,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+export const LazyActionButtons: typeof import("../components/ActionButtons/index.vue")['default']
 export const LazyMainButtons: typeof import("../components/MainButtons/index.vue")['default']
 export const LazyMenuBar: typeof import("../components/MenuBar/index.vue")['default']
 export const LazyStatusBattery: typeof import("../components/Status/Battery/index.vue")['default']

@@ -15,7 +15,7 @@
     </svg>
 
     <div
-      class="grid place-content-center h-18 w-18 p-4 rounded-full bg-[#FE0000]"
+      class="grid place-content-center h-18 w-18 p-4 rounded-full bg-[#FE0000] hover:bg-[#2E2E2E]/70"
     >
       <img src="assets/icons/switchLogo.svg" alt="Avatar" class="h-16" />
     </div>

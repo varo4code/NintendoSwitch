@@ -19,7 +19,10 @@
     <div v-else>
       <slot></slot>
     </div>
-    <MenuBar :span="1"> Footer </MenuBar>
+    <MenuBar>
+      <img src="assets/icons/switch.svg" alt="Nintendo" class="h-10">
+      <ActionButtons></ActionButtons>
+    </MenuBar>
   </div>
 </template>
 
