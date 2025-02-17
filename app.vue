@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <head>
+    <title>Nintendo Switch</title>
+  </head>
+
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
