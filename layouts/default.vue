@@ -21,7 +21,7 @@
     </div>
     <MenuBar>
       <img src="assets/icons/switch.svg" alt="Nintendo" class="h-10">
-      <ActionButtons></ActionButtons>
+      <ActionButtons :show="initialized"></ActionButtons>
     </MenuBar>
   </div>
 </template>
