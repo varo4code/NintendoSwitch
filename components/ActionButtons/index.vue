@@ -40,4 +40,7 @@ interface Props {
 }
 
 defineProps<Props>();
+
+const gamesStore = useGamesStore()
+const { initialized } = storeToRefs(gamesStore)
 </script>

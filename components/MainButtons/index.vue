@@ -1,7 +1,7 @@
 <template>
   <div
     class="flex items-center gap-3 transition-all duration-1200 opacity-0"
-    :class="{ 'opacity-100': show }"
+    :class="{ 'opacity-100': initialized }"
   >
     <img src="assets/icons/avatarMario.svg" alt="Avatar" class="h-18" />
     <svg
@@ -52,4 +52,7 @@ defineProps<Props>();
 defineEmits<{
   power: [void]
 }>()
+
+const gamesStore = useGamesStore()
+const { initialized } = storeToRefs(gamesStore)
 </script>
