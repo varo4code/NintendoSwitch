@@ -13,7 +13,7 @@
         @click="startSwitch"
         src="assets/icons/power.svg"
         alt="Power"
-        class="w-35 h-35 rounded-full border-6 p-4 border-white transition-all duration-700 hover:bg-[#199fffe6] hover:w-38 hover:h-38"
+        class="w-35 h-35 rounded-full border-6 p-4 border-white transition-all duration-700 hover:bg-[#43D6DF] hover:w-38 hover:h-38"
       />
     </div>
     <div v-else>

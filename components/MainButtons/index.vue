@@ -15,27 +15,27 @@
     </svg>
 
     <div
-      class="grid place-content-center h-18 w-18 p-4 rounded-full bg-[#FE0000] hover:bg-[#2E2E2E]/70"
+      class="grid place-content-center h-18 w-18 p-4 rounded-full bg-[#FE0000] hover:border-5 hover:border-[#43D6DF] hover:p-3"
     >
       <img src="assets/icons/switchLogo.svg" alt="Avatar" class="h-16" />
     </div>
 
-    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:bg-[#2E2E2E]/70">
+    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:border-5 hover:border-[#43D6DF] hover:p-3">
         <img src="assets/icons/message.svg" alt="Chat" class="h-11" />
     </div>
-    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:bg-[#2E2E2E]/70">
+    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:border-5 hover:border-[#43D6DF] hover:p-3">
         <img src="assets/icons/shop.svg" alt="Shop" class="h-11" />
     </div>
-    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:bg-[#2E2E2E]/70">
+    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:border-5 hover:border-[#43D6DF] hover:p-3">
         <img src="assets/icons/frame.svg" alt="Screen" class="h-11" />
     </div>
-    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:bg-[#2E2E2E]/70">
+    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:border-5 hover:border-[#43D6DF] hover:p-3">
         <img src="assets/icons/joycon.svg" alt="Joycon" class="h-11" />
     </div>
-    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:bg-[#2E2E2E]/70">
+    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:border-5 hover:border-[#43D6DF] hover:p-3">
         <img src="assets/icons/brightness.svg" alt="Brightness" class="h-11" />
     </div>
-    <div @click="$emit('power')" class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:bg-[#2E2E2E]/70">
+    <div @click="$emit('power')" class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:border-5 hover:border-[#43D6DF] hover:p-3">
         <img src="assets/icons/power.svg" alt="Power" class="h-11" />
     </div>
 
