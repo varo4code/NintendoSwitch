@@ -5,7 +5,7 @@
     :style="styleObj"
   >
     <MenuBar>
-      <MainButtons :show="initialized"></MainButtons>
+      <MainButtons :show="initialized" v-on:power="turnOff"></MainButtons>
       <Status></Status>
     </MenuBar>
     <div v-if="!initialized" class="grid place-items-center">
@@ -20,7 +20,7 @@
       <slot></slot>
     </div>
     <MenuBar>
-      <img src="assets/icons/switch.svg" alt="Nintendo" class="h-10">
+      <img src="assets/icons/switch.svg" alt="Nintendo" class="h-10" />
       <ActionButtons :show="initialized"></ActionButtons>
     </MenuBar>
   </div>
@@ -53,10 +53,22 @@ const startSwitch = () => {
     } else {
       console.warn("Fullscreen API is not supported in this browser.");
     }
-  }
-  setTimeout(() => {
+    setTimeout(() => {
+      initialized.value = true;
+      setTimeout(() => {
+        styleObj.value = { backgroundImage: `url(/images/bg/marioOdyssey.svg)` };
+      }, 1100);
+    }, 1100);
+  }else{
     initialized.value = true;
-    styleObj.value = { backgroundImage: `url(/images/bg/marioOdyssey.svg)` };
-  }, 1100);
+    setTimeout(() => {
+      styleObj.value = { backgroundImage: `url(/images/bg/marioOdyssey.svg)` };
+    }, 1100);
+  }
+};
+
+const turnOff = () => {
+  initialized.value = false;
+  styleObj.value = { backgroundImage: `url(/images/bg/gray.svg)` };
 };
 </script>

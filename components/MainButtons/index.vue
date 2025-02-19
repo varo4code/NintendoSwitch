@@ -35,7 +35,7 @@
     <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:bg-[#2E2E2E]/70">
         <img src="assets/icons/brightness.svg" alt="Brightness" class="h-11" />
     </div>
-    <div class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:bg-[#2E2E2E]/70">
+    <div @click="$emit('power')" class="grid place-content-center h-18 w-18 rounded-full bg-[#2E2E2E]/40 hover:bg-[#2E2E2E]/70">
         <img src="assets/icons/power.svg" alt="Power" class="h-11" />
     </div>
 
@@ -48,4 +48,8 @@ interface Props {
 }
 
 defineProps<Props>();
+
+defineEmits<{
+  power: [void]
+}>()
 </script>
