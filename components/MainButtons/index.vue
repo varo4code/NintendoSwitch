@@ -43,12 +43,6 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-  show: boolean;
-}
-
-defineProps<Props>();
-
 defineEmits<{
   power: [void]
 }>()

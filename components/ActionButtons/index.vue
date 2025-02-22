@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center gap-10 transition-all duration-1200 opacity-0" :class="{'opacity-100' : show}">
+  <div class="flex items-center gap-10 transition-all duration-1200 opacity-0" :class="{'opacity-100' : initialized}">
     <!-- OPTIONS BUTTON -->
     <div
       class="flex justify-around items-center gap-2 text-white font-[Poppins] font-extralight text-3xl"
@@ -35,11 +35,6 @@
 
 <script setup lang="ts">
 const isPlaying = ref(true);
-interface Props {
-  show: boolean;
-}
-
-defineProps<Props>();
 
 const gamesStore = useGamesStore()
 const { initialized } = storeToRefs(gamesStore)

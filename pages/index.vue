@@ -3,9 +3,7 @@
     class="grid grid-rows-[7fr_4fr] h-full opacity-0 transition-all duration-1200"
     :class="{ 'opacity-100': initialized }"
   >
-    <div
-      class="relative flex w-full overflow-x-hidden scrollbar-hide scrollbar-hidden"
-    >
+    <div class="relative flex w-full overflow-x-hidden scrollbar-hidden">
       <div
         ref="carousel"
         class="flex gap-6 px-6 py-4 transition-all duration-300"
@@ -13,13 +11,12 @@
         <img
           v-for="g in games"
           :key="g.id"
+          :data-id="g.id"
+          ref="gameRefs"
           :src="'/images/miniatures/' + g.img"
           :alt="g.title"
           class="cursor-pointer transition-transform duration-300 hover:scale-110"
-          :class="[
-            g.active ? 'w-[300px] h-[300px]' : 'w-[200px] h-[200px]',
-            g.id == 1 ? 'ml-26' : '',
-          ]"
+          :class="[g.active ? 'w-[300px] h-[300px]' : 'w-[200px] h-[200px]']"
           @click="selectGame(g.id)"
         />
       </div>
@@ -63,21 +60,26 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-  show: boolean;
-}
-
-defineProps<Props>();
-
-definePageMeta({
-  keepalive: true
-});
-
 const gamesStore = useGamesStore();
 const { initialized, games, currentGame } = storeToRefs(gamesStore);
 
-const selectGame = (id: number) => {
-  gamesStore.setActive(id);
+const gameRefs = ref<HTMLImageElement[]>([]);
+const carousel = ref<HTMLElement | null>(null);
+
+const selectGame = async (id: number) => {
+  await nextTick();
+
+  const gameElement = gameRefs.value.find((el) => el.dataset.id == String(id));
+  
+  if (gameElement) {
+    console.log(gameElement);
+    gameElement.scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center'
+    })
+
+    gamesStore.setActive(id);
+  }
 };
 </script>
 
@@ -91,5 +93,6 @@ const selectGame = (id: number) => {
 
 .scrollbar-hidden {
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 </style>
